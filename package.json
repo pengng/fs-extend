@@ -1,0 +1,23 @@
+{
+  "name": "fs-extend",
+  "version": "0.0.1",
+  "description": "fs package extension function",
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pengng/fs-extend.git"
+  },
+  "keywords": [
+    "fs",
+    "extension"
+  ],
+  "author": "yupeng.kuo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pengng/fs-extend/issues"
+  },
+  "homepage": "https://github.com/pengng/fs-extend#readme"
+}
