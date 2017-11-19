@@ -24,21 +24,26 @@ describe('test extend.js', function () {
   //   extend.mkdir(fullpath, done)
   // })
   describe('test mkdirSync()', function () {
-    const fullpath = '/Users/yupeng.kuo/demo/demo/1/2/3/4'
+    const fullpath = './1/2/3/4/5/6/7/8'
     extend.mkdirSync(fullpath)
   })
   describe('test rmSync()', function () {
-    const fullpath = '/Users/yupeng.kuo/demo'
+    const fullpath = './1'
     extend.rmSync(fullpath)
   })
   describe('test find()', function (done) {
-    const fullpath = '..'
-    extend.find(fullpath, /^huodong/, function (err, result) {
+    const fullpath = '.'
+    extend.find(fullpath, 'e', function (err, result) {
       if (err) {
         return done(err)
       }
       console.log(result)
       done()
     })
+  })
+  describe('test findSync()', function () {
+    const fullpath = '.'
+    const result = extend.findSync(fullpath, 'e')
+    console.log(result)
   })
 })
