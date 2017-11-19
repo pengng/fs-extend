@@ -59,4 +59,17 @@ describe('test extend.js', function () {
     const result = extend.listFilesSync('.')
     console.log(result)
   })
+  describe('test empty()', function (done) {
+    extend.empty('0', function (err, isEmpty) {
+      if (err) {
+        return done(err)
+      }
+      console.log(isEmpty)
+      done()
+    })
+  })
+  describe('test emptySync()', function () {
+    const isEmpty = extend.emptySync('0')
+    console.log('isEmpty: %s', isEmpty)
+  })
 })

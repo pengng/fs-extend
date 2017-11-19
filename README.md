@@ -28,8 +28,14 @@ fsEx.mkdir('./1/2/3/4/5/6/7/8/9', (err) => {
 - `findSync(path, pattern)` [同步查找`path`目录及子目录下匹配`pattern`的文件和目录。](#findsync)
 - `listFiles(path, callback)` [列出目录及子目录下所有文件](#listfiles)
 - `listFilesSync(path)` [同步列出目录及子目录所有文件](#listfilessync)
+- `empty(path, callback)` [判断目录是否空目录](#empty)
+- `emptySync(path)` [同步判断目录是否空目录](#emptysync)
 
 #### mkdir
+
+- `path` **<string>** 目录路径
+- `callback` **<Function>**
+  - `err` **<Error>**
 
 递归建立目录
 
@@ -46,6 +52,8 @@ fsEx.mkdir('./1/2/3/4/5/6/7/8/9', (err) => {
 
 同步递归建立目录
 
+- `path` **<string>**
+
 ```javascript
 try {
   fsEx.mkdirSync('./1/2/3/4/5/6/7/8/9')
@@ -59,6 +67,10 @@ try {
 
 删除目录及子目录
 
+- `path` **<string>** 目录路径
+- `callback` **<Function>**
+  - `err` **<Error>**
+
 ```javascript
 fsEx.rm('./1', (err) => {
   if (err) {
@@ -70,7 +82,9 @@ fsEx.rm('./1', (err) => {
 
 #### rmSync
 
-同步删除目录及子目录
+同步删除目录及子目录。
+
+- `path` **<string>** 删除的目录
 
 ```javascript
 try {
@@ -85,11 +99,11 @@ try {
 
 查找`path`目录及子目录下匹配`pattern`的文件和目录。
 
-- `path` <string> 查找的目录。
-- `pattern` <string>|<RegExp> 查找的模式。
-- `callback` <Function> 
-  - `err` <Error> 
-  - `result` <string[]> 查找的结果。
+- `path` **<string>** 查找的目录。
+- `pattern` **<string>|<RegExp>** 查找的模式。
+- `callback` **<Function> **
+  - `err` **<Error> **
+  - `result` **<string[]>** 查找的结果。
 
 ```javascript
 fsEx.find('.', '.jpg', (err, result) => {
@@ -104,8 +118,8 @@ fsEx.find('.', '.jpg', (err, result) => {
 
 同步查找`path`目录及子目录下匹配`pattern`的文件和目录。
 
-- `path` <string> 查找的目录。
-- `pattern` <string>|<RegExp> 查找的模式。
+- `path` **<string>** 目录路径。
+- `pattern` **<string>|<RegExp>** 查找的模式。
 
 ```javascript
 try {
@@ -146,5 +160,33 @@ try {
   console.error(err)
 }
 
+```
+
+#### empty
+
+判断目录是否空目录
+
+```javascript
+fsEx.empty('.', (err, isEmpty) => {
+  if (err) {
+    return console.error(err)
+  }
+  console.log('isEmpty: %s', isEmpty)
+})
+```
+
+#### emptySync
+
+同步判断目录是否空目录。
+
+- `path` **<string>**
+
+```javascript
+try {
+  const isEmpty = fsEx.emptySync('.')
+  console.log('isEmpty: %s', isEmpty)
+} catch (err) {
+  console.error(err)
+}
 ```
 
