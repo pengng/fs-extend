@@ -33,9 +33,9 @@ fsEx.mkdir('./1/2/3/4/5/6/7/8/9', (err) => {
 
 #### mkdir
 
-- `path` **<string>** 目录路径
-- `callback` **<Function>**
-  - `err` **<Error>**
+- `path` **\<string\>** 目录路径
+- `callback` **\<Function\>**
+  - `err` **\<Error\>**
 
 递归建立目录
 
@@ -52,7 +52,7 @@ fsEx.mkdir('./1/2/3/4/5/6/7/8/9', (err) => {
 
 同步递归建立目录
 
-- `path` **<string>**
+- `path` **\<string\>**
 
 ```javascript
 try {
@@ -67,9 +67,9 @@ try {
 
 删除目录及子目录
 
-- `path` **<string>** 目录路径
-- `callback` **<Function>**
-  - `err` **<Error>**
+- `path` **\<string\>** 目录路径
+- `callback` **\<Function\>**
+  - `err` **\<Error\>**
 
 ```javascript
 fsEx.rm('./1', (err) => {
@@ -84,7 +84,7 @@ fsEx.rm('./1', (err) => {
 
 同步删除目录及子目录。
 
-- `path` **<string>** 删除的目录
+- `path` **\<string\>** 删除的目录
 
 ```javascript
 try {
@@ -99,11 +99,11 @@ try {
 
 查找`path`目录及子目录下匹配`pattern`的文件和目录。
 
-- `path` **<string>** 查找的目录。
-- `pattern` **<string>|<RegExp>** 查找的模式。
-- `callback` **<Function> **
-  - `err` **<Error> **
-  - `result` **<string[]>** 查找的结果。
+- `path` **\<string\>** 查找的目录。
+- `pattern` **\<string\> | \<RegExp\>** 查找的模式。
+- `callback` **\<Function\>**
+  - `err` **\<Error\>**
+  - `result` **\<string[]\>** 查找的结果。
 
 ```javascript
 fsEx.find('.', '.jpg', (err, result) => {
@@ -118,8 +118,8 @@ fsEx.find('.', '.jpg', (err, result) => {
 
 同步查找`path`目录及子目录下匹配`pattern`的文件和目录。
 
-- `path` **<string>** 目录路径。
-- `pattern` **<string>|<RegExp>** 查找的模式。
+- `path` **\<string\>** 目录路径。
+- `pattern` **\<string\> | \<RegExp\>** 查找的模式。
 
 ```javascript
 try {
@@ -134,10 +134,10 @@ try {
 
 列出目录及子目录下所有文件。
 
-- `path` **<string>** 
-- `callback` **<Function>**
-  - `err` **<Error>** 
-  - `result` **<string[]>** 文件列表。
+- `path` **\<string\>** 
+- `callback` **\<Function\>**
+  - `err` **\<Error\>** 
+  - `result` **\<string[]\>** 文件列表。
 
 ```javascript
 fsEx.listFiles('.', (err, result) => {
@@ -179,7 +179,7 @@ fsEx.empty('.', (err, isEmpty) => {
 
 同步判断目录是否空目录。
 
-- `path` **<string>**
+- `path` **\<string\>**
 
 ```javascript
 try {

@@ -1,6 +1,6 @@
 {
   "name": "fs-extend",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "fs package extension function",
   "main": "index.js",
   "scripts": {
