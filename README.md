@@ -26,6 +26,8 @@ fsEx.mkdir('./1/2/3/4/5/6/7/8/9', (err) => {
 - `rmSync(path)` [同步删除目录及子目录](#rmsync)
 - `find(path, pattern, callback)` [查找`path`目录及子目录下匹配`pattern`的文件和目录。](#find)
 - `findSync(path, pattern)` [同步查找`path`目录及子目录下匹配`pattern`的文件和目录。](#findsync)
+- `listFiles(path, callback)` [列出目录及子目录下所有文件](#listfiles)
+- `listFilesSync(path)` [同步列出目录及子目录所有文件](#listfilessync)
 
 #### mkdir
 
@@ -112,5 +114,37 @@ try {
 } catch (err) {
   console.error(err)
 }
+```
+
+#### listFiles
+
+列出目录及子目录下所有文件。
+
+- `path` **<string>** 
+- `callback` **<Function>**
+  - `err` **<Error>** 
+  - `result` **<string[]>** 文件列表。
+
+```javascript
+fsEx.listFiles('.', (err, result) => {
+  if (err) {
+    return console.error(err)
+  }
+  console.log(result)
+})
+```
+
+#### listFilesSync
+
+同步列出目录及子目录所有文件。
+
+```javascript
+try {
+  const result = fsEx.listFilesSync('.')
+  console.log(result)
+} catch (err) {
+  console.error(err)
+}
+
 ```
 

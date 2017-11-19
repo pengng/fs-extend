@@ -19,10 +19,10 @@ const describe = function (description, func) {
 }
 
 describe('test extend.js', function () {
-  // describe('test mkdir()', function (done) {
-  //   const fullpath = '/Users/yupeng.kuo/demo/demo/1/2/3/4'
-  //   extend.mkdir(fullpath, done)
-  // })
+  describe('test mkdir()', function (done) {
+    const fullpath = './1/2/3/4/5/6/7/8'
+    extend.mkdir(fullpath, done)
+  })
   describe('test mkdirSync()', function () {
     const fullpath = './1/2/3/4/5/6/7/8'
     extend.mkdirSync(fullpath)
@@ -44,6 +44,19 @@ describe('test extend.js', function () {
   describe('test findSync()', function () {
     const fullpath = '.'
     const result = extend.findSync(fullpath, 'e')
+    console.log(result)
+  })
+  describe('test listFiles()', function (done) {
+    extend.listFiles('.', function (err, result) {
+      if (err) {
+        return done(err)
+      }
+      console.log(result)
+      done()
+    })
+  })
+  describe('test listFilesSync()', function () {
+    const result = extend.listFilesSync('.')
     console.log(result)
   })
 })
