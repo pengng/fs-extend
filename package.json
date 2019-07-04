@@ -1,23 +1,29 @@
 {
-  "name": "fs-extend",
-  "version": "0.0.4",
-  "description": "fs package extension function",
-  "main": "index.js",
-  "scripts": {
-    "test": "node test/extend.test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pengng/fs-extend.git"
-  },
-  "keywords": [
-    "fs",
-    "extension"
-  ],
-  "author": "yupeng.kuo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pengng/fs-extend/issues"
-  },
-  "homepage": "https://github.com/pengng/fs-extend#readme"
+    "name": "fs-extend",
+    "version": "0.1.0",
+    "description": "提供扩展原生fs模块不支持的功能",
+    "main": "index.js",
+    "scripts": {
+        "test": "node test/extend.test.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pengng/fs-extend.git"
+    },
+    "keywords": [
+        "文件",
+        "目录",
+        "文件系统",
+        "查找",
+        "搜索",
+        "路径",
+        "子目录",
+        "递归"
+    ],
+    "author": "yupeng.kuo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/pengng/fs-extend/issues"
+    },
+    "homepage": "https://github.com/pengng/fs-extend#readme"
 }

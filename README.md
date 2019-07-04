@@ -1,6 +1,6 @@
 # fs-extend
 
-fs package extension function
+#### 提供扩展原生fs模块不支持的功能
 
 ### Usage
 
